@@ -1,0 +1,8 @@
+.container {
+	border: dotted 1px green;
+	text-align: center;
+}
+
+#button {
+	margin-top: 15px;
+}
