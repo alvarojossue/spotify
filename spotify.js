@@ -24,10 +24,18 @@ $(document).on("ready", function(){
 
 function displayInfo(the_array){
 	the_array.forEach(function(the_item){
-		var html = `
-			<li>
-				<p>Name: ${the_item.name}</p>
-			</li>`;
+		if (the_item.images.length > 0){
+			var html = `
+				<li>
+					<p>Name: ${the_item.name}</p>
+					<img src="${the_item.images[0].url}" width="350px">
+				</li>`;
+		} else { 
+			var html = `
+				<li>
+					<p>Name: ${the_item.name}</p>
+				</li>`
+		}
 		$(".js-info").append(html);
 	});
 }
